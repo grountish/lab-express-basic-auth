@@ -1,0 +1,22 @@
+<section class="text-center">
+  <form id="form" class="form-group  col-lg-6" action="/signup" method="POST">
+    <label for="username">Username</label>
+    <br>
+
+    <input type="text" name="username" placeholder="Your username">
+
+    <label for="password">Password</label>
+    <br>
+
+    <input type="password" name="password" placeholder="********">
+    <label for="RepeatPassword">Repeat Password</label>
+
+    <input type="password" name="repeatPassword" placeholder="********">
+    <button type="submit">Create account </button>
+  </form>
+
+  {{#if errorMessage}}
+  <div class="error-message">{{ errorMessage }}</div>
+  {{/if}}
+
+</section>
