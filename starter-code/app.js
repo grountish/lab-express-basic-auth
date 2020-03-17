@@ -80,7 +80,7 @@ const auth = require("./routes/auth");
 app.use("/", auth);
 
 const user = require('./routes/site-routes')
-app.use('/user',user)
+app.use('/user', user)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

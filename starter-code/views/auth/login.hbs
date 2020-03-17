@@ -1,16 +1,45 @@
 <form action="/login" method="POST" id="form">
     <h2>Login</h2>
+    <div class="mt-3 pt-3">
+        <label for="username">Username</label>
+        <input type="text" class="form-control" name="username">
+    </div>
+    <div class="mt-3 pt-3">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" name="password"> {{#if errorMessage }}
+    </div>
+    <div class="error-message">{{ errorMessage }}</div>
+    {{/if}}
 
-    <label for="username">Username</label>
-    <input type="text" name="username">
+    <button class="btn btn-primary my-3">Log in</button>
 
-    <label for="password">Password</label>
-    <input type="password" name="password"> {{#if errorMessage }}
-<div class="error-message">{{ errorMessage }}</div>
-{{/if}}
-
-<button>Log in</button>
-
-<p class="account-message">Don't have an account? <a href="/signup">Sign up</a>
-</p>
+    <p class="account-message">Don't have an account? <a href="/signup">Sign up</a>
+    </p>
 </form>
+{{!-- 
+<form id="form" class="needs-validation form-group mx-auto col-lg-8" action="/signup" method="POST" >
+    <div class="form-row">
+        <div class="col-md-4 mb-3">
+            <label for="validationCustom01">Username</label>
+            <input type="text" class="form-control" name="username" id="validationCustom01" placeholder="First name" value="Mark"
+                required>
+            <div class="valid-feedback">
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <label for="validationCustom02">Password</label>
+            <input type="password" class="form-control" id="validationCustom02" name="password" placeholder="*****" 
+                required>
+            <div class="valid-feedback">
+            </div>
+        </div>
+       
+    </div>
+    <p class="account-message">Don't have an account? <a href="/signup">Sign up</a>
+</p>
+    <button class="btn btn-primary" type="submit">Log in!</button>
+     {{#if errorMessage}}
+    <div class="error-message">{{ errorMessage }}</div>
+    {{/if}}
+    
+</form> --}}

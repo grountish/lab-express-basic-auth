@@ -29,4 +29,5 @@ router.get("/main", (req, res, next) => {
 router.get("/private", (req, res, next) => {
     res.render("user/private");
   });
+  
 module.exports = router;
